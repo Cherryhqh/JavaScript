@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nextSibling</title>
+</head>
+<body>
+<ul id="u1">
+    <li id="a">javascript</li>
+    <li id="b">jquery</li>
+    <li id="c">html</li>
+</ul>
+<ul id="u2">
+   <li id="d">css3</li>
+    <li id="e">php</li>
+    <li id="f">java</li>
+</ul>
+<script type="text/javascript">
+    function get_NextSibling(n){
+        var gs=n.nextSibling;
+        while (gs&&gs.nodeType!=1){
+            gs=gs.nextSibling;
+
+        }
+        return gs;
+    }
+    var getElements=document.getElementsByTagName("li")[0];
+    document.write(getElements.nodeName);
+    document.write("=");
+    document.write(getElements.innerHTML);
+
+    var getNextSibling=get_NextSibling(getElements);
+    document.write("<br /> nextSibling:");
+    document.write(getNextSibling.nodeName);
+    document.write("=");
+    document.write(getNextSibling,innerHTML);
+</script>
+</body>
+</html>

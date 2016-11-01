@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>timer</title>
+    <script type="text/javascript">
+        var setTime=setInterval(clock,100);
+        //document.write(setTime+"<br />");
+        function  clock() {
+            var currentTime=new Date();
+            document.getElementById("clock").value=currentTime;
+        }
+    </script>
+</head>
+<body>
+<from>
+    <input type="text" id="clock" size="50"/>
+    <input type="button" value="stop" onclick="clearInterval(setTime)"/>
+</from>
+
+</body>
+</html>

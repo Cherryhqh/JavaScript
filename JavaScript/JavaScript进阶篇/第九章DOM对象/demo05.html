@@ -1,0 +1,39 @@
+<!DOCTYOE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+<p id="intro">Subjects</p>
+<ul>
+    <li title="first li">
+        HTML
+    </li>
+    <li title="">
+        CSS
+    </li>
+    <li title="third li">
+        JAVASCRIPT
+    </li>
+    <li title="fourth li">
+        jquery
+    </li>
+</ul>
+<p>this is to obtain the value of title while is not black in the li tags</p>
+<script type="text/javascript">
+    var getTag=document.getElementsByTagName("li");
+    for(var i=0;i<getTag.length;i++){
+        var text=getTag[i].getAttribute("title");
+        if(text!=null){
+            document.write(text+"<br />")
+        }
+        if(text==""){
+            getTag[i].setAttribute("title","web");
+            var getTitle=getTag[i].getAttribute("title");
+            document.write(getTitle+"<br />");
+        }
+    }
+</script>
+</body>
+</html>

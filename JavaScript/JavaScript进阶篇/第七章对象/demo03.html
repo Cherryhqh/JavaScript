@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>日期对象</title>
+    <script type="text/javascript">
+        /*get/setTime返回/设置时间，单位毫秒数，计算从1970年1月1日零时到日期对象所指的日期的毫秒数*/
+
+        var mydate=new Date();
+        document.write("当前时间:"+mydate+"<br />");
+        mydate.setTime(mydate.getTime()+60*60*1000);
+        document.write("推迟一小时的时间:"+mydate);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

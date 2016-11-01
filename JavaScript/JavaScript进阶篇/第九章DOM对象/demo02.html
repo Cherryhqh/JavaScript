@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>getElementsByName()</title>
+    <script type="text/javascript">
+        function getName() {
+            var myNode=document.getElementsByName("myth");
+            alert(myNode.length);
+        }
+    </script>
+</head>
+<body>
+<form>
+    <input type="text" name="myth"  value="1"/>
+    <input type="text" name="myth"  value="2"/>
+    <input type="text" name="myth"  value="3"/>
+    <input type="text" name="myth"  value="4"/>
+    <input type="text" name="myth"  value="5"/>
+    <input type="text" name="myth"  value="6"/>
+    <input type="button" value="click here" onclick="getName()"/>
+</form>
+
+
+</body>
+</html>

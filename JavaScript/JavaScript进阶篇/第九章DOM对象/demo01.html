@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM</title>
+
+</head>
+<body>
+<h2 id="con">I Love JavaScript</h2>
+<p>what you said is wrong</p>
+<form>
+    <input type="button" value="change" onclick="changeStyle()"/>
+    <input type="button" value="hidden" onclick="hiddenStyle()"/>
+</form>
+<script type="text/javascript">
+    var myDom=document.getElementById("con");
+    function changeStyle() {
+
+        myDom.style.color=red;
+        myDom.style.backgroundColor="#ccc";
+    }
+
+    function hiddenStyle(){
+        myDom.style.display="none";
+    }
+</script>
+</body>
+</html>

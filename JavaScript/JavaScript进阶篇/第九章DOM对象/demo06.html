@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>node</title>
+
+</head>
+<body>
+<ul>
+    <li>javascript</li>
+    <li>HTML/CSS</li>
+    <li>jQuery</li>
+</ul>
+<script type="text/javascript">
+    var getNode=document.getElementsByTagName("li");
+    for( var i=0;i<getNode.length;i++){
+        document.write("nodeName:"+getNode[i].nodeName+"<br />");
+        document.write("nodeValue:"+getNode[i].nodeValue+"<br />");
+        document.write("nodeType:"+getNode[i].nodeType+"<br />");
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>appendChild</title>
+
+</head>
+<body>
+<ul id="test">
+    <li>JavaScript</li>
+    <li>HTML</li>
+</ul>
+<script type="text/javascript">
+    //get element by id
+    var getElement=document.getElementById("test");
+    //create a new node
+    var newNode=document.createElement("li");
+    //add content to new node
+    newNode.innerHTML="PHP";
+    //appendChild() add a new node
+    getElement.appendChild(newNode);
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>createTextNode</title>
+    <style type="text/css">
+        .message{
+            width:200px;
+            height:100px;
+            background-color:#CCC;
+        }
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+    var element=document.createElement("div");
+    element.className="message";
+    var textNode=document.createTextNode("Hello World!");
+    element.appendChild(textNode);
+    document.body.appendChild(element);
+</script>
+</body>
+</html>

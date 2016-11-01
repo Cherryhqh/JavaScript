@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> new document </title>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+
+        window.onload = function(){
+            var getTrNode=document.getElementsByTagName("tr");
+
+
+
+            for(var i= 0;i<getTrNode.length;i++)
+            {
+                backgroundChange(getTrNode[i]);
+            }
+            // 鼠标移动改变背景,可以通过给每行绑定鼠标移上事件和鼠标移除事件来改变所在行背景色。
+        }
+        function backgroundChange(obj) {
+            obj.onmouseover=function(){
+                obj.style.backgroundColor="#f2f2f2";
+            }
+            obj.onmouseout=function(){
+                obj.style.backgroundColor="#fff";
+            }
+        }
+
+
+        // 编写一个函数，供添加按钮调用，动态在表格的最后一行添加子节点；
+        var count=2;
+        function add(){
+            count++;
+            var addTr=document.createElement("tr");
+            var addTd1=document.createElement("td");
+            var addTd2=document.createElement("td");
+            var addTd3=document.createElement("td");
+
+            addTd1.innerHTML="xh00"+count;
+            addTd2.innerHTML="第"+count+"学生";
+            addTd3.innerHTML="<a href='javascript:;' onclick='del(this)' >删除</a>";
+
+            //document.write(addTd1.innerHTML);
+            //document.write(addTd2.innerHTML);
+            //document.write(addTd3.innerHTML);
+
+            var getTableNode=document.getElementById("table");
+
+
+
+            getTableNode.appendChild(addTr);
+            getTableNode.appendChild(addTd1);
+            getTableNode.appendChild(addTd2);
+            getTableNode.appendChild(addTd3);
+
+            var getTrNode=document.getElementsByTagName("tr");
+            for( var i=0;i<getTrNode.length;i++){
+                backgroundChange(getTrNode[i]);
+            }
+
+        }
+
+
+
+        // 创建删除函数
+        function  del(object) {
+            //get objects's grandfather's node :tr
+           var getNode=object.parentNode.parentNode;
+            //document.write(getNode.nodeName);
+            //get tr's parentNode table,then remove table's childNode tr
+            getNode.parentNode.removeChild(getNode);
+            document.write(getNode.parentNode.nodeName);
+        }
+
+
+    </script>
+</head>
+<body>
+<table border="1" width="50%" id="table">
+    <tr >
+        <th>学号</th>
+        <th>姓名</th>
+        <th>操作</th>
+
+
+    </tr>
+
+    <tr>
+        <td>xh001</td>
+        <td>王小明</td>
+        <td><a href="javascript:;" onclick="del(this);">删除</a></td>   <!--在删除按钮上添加点击事件  -->
+    </tr>
+
+    <tr>
+        <td>xh002</td>
+        <td>刘小芳</td>
+        <td><a href="javascript:;" onclick="del(this);" >删除</a></td>   <!--在删除按钮上添加点击事件  -->
+    </tr>
+
+</table>
+<input type="button" value="添加一行" onclick="add()" />   <!--在添加按钮上添加点击事件  -->
+</body>
+</html>

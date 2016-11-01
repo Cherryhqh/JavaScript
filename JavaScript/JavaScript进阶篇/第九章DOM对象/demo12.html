@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>insertBefore</title>
+</head>
+<body>
+<ul id="test">
+    <li>JavaScript</li>
+    <li>HTML</li>
+
+</ul>
+<script type="text/javascript">
+    var getElement=document.getElementById("test");
+    var newNode=document.createElement("li");
+    newNode.innerHTML="php";
+    var node=document.getElementsByTagName("li")[1];
+    getElement.insertBefore(newNode,node);
+
+    getElement.insertBefore(newNode,getElement.lastChild);
+</script>
+</body>
+</html>
